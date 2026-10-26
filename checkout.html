@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | TicketZone</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">TICKET<span>ZONE</span></div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#events">Events</a>
+            <a href="#">My Tickets</a>
+        </nav>
+    </header>
+
+    <section class="checkout-page">
+
+        <div class="checkout-header">
+            <p class="tagline">ALMOST THERE</p>
+            <h1>Complete Your Booking</h1>
+            <p>Review your tickets and complete the payment.</p>
+        </div>
+
+        <div class="checkout-layout">
+
+            <!-- Booking Summary -->
+
+            <div class="checkout-card">
+
+                <h2>Booking Summary</h2>
+
+                <div class="checkout-event">
+                    <div class="checkout-event-image">
+                        <span>LIVE EVENT</span>
+                    </div>
+
+                    <div>
+                        <h3 id="checkoutEventName">
+                            Music Festival 2026
+                        </h3>
+
+                        <p>Chennai, Tamil Nadu</p>
+
+                        <p>November 15, 2026</p>
+                    </div>
+                </div>
+
+                <div class="checkout-ticket">
+                    <span>VIP Tickets</span>
+                    <strong id="checkoutVip">0 × ₹1,499</strong>
+                </div>
+
+                <div class="checkout-ticket">
+                    <span>General Admission</span>
+                    <strong id="checkoutGeneral">0 × ₹499</strong>
+                </div>
+
+                <div class="checkout-total">
+                    <span>Total Amount</span>
+                    <strong id="checkoutTotal">₹0</strong>
+                </div>
+
+            </div>
+
+            <!-- Payment Section -->
+
+            <div class="checkout-card payment-card">
+
+                <h2>Reservation Status</h2>
+
+                <div class="reservation-timer">
+
+                    <p>Your tickets are temporarily reserved for</p>
+
+                    <div id="countdown">10:00</div>
+
+                    <p id="timerMessage">
+                        Please complete your payment before time runs out.
+                    </p>
+
+                </div>
+
+                <div class="payment-details">
+
+                    <h3>Payment Method</h3>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="UPI" checked>
+                        UPI Payment
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="Card">
+                        Credit / Debit Card
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="Net Banking">
+                        Net Banking
+                    </label>
+
+                </div>
+
+                <button
+                    id="payButton"
+                    class="checkout-btn"
+                    onclick="processPayment()">
+
+                    Pay Now
+
+                </button>
+
+                <div id="paymentResult"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 TicketZone. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | TicketZone</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">TICKET<span>ZONE</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="organizer-dashboard.html">Organizer</a>
+        <a href="admin-dashboard.html">Admin</a>
+    </nav>
+</header>
+
+<section class="admin-dashboard">
+
+    <div class="dashboard-heading">
+        <div>
+            <p class="tagline">ADMINISTRATION</p>
+            <h1>Admin Dashboard</h1>
+            <p>Manage users, organizers, and platform events.</p>
+        </div>
+    </div>
+
+    <!-- STATISTICS -->
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <p>Total Users</p>
+            <h2 id="adminUsers">0</h2>
+            <span>Registered users</span>
+        </div>
+
+        <div class="stat-card">
+            <p>Organizers</p>
+            <h2 id="adminOrganizers">0</h2>
+            <span>Event organizers</span>
+        </div>
+
+        <div class="stat-card">
+            <p>Total Events</p>
+            <h2 id="adminEvents">0</h2>
+            <span>Platform events</span>
+        </div>
+
+        <div class="stat-card">
+            <p>Total Revenue</p>
+            <h2 id="adminRevenue">₹0</h2>
+            <span>Successful payments</span>
+        </div>
+
+    </div>
+
+    <!-- ORGANIZER MANAGEMENT -->
+
+    <div class="admin-section">
+
+        <h2>Organizer Management</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Organizer</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="organizerTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- EVENT MANAGEMENT -->
+
+    <div class="admin-section">
+
+        <h2>All Events</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Location</th>
+                        <th>Date</th>
+                        <th>Tickets Sold</th>
+                        <th>Revenue</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="adminEventTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 TicketZone. All rights reserved.</p>
+</footer>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

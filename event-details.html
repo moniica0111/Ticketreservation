@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Details | TicketZone</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">TICKET<span>ZONE</span></div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#events">Events</a>
+            <a href="#">My Tickets</a>
+        </nav>
+    </header>
+
+    <section class="event-details">
+
+        <div class="event-banner">
+            <span class="event-category">LIVE MUSIC</span>
+
+            <h1 id="eventTitle">Music Festival 2026</h1>
+
+            <p>Chennai | November 15, 2026</p>
+        </div>
+
+        <div class="booking-layout">
+
+            <div class="event-description">
+
+                <h2>About This Event</h2>
+
+                <p>
+                    Experience an unforgettable evening filled with
+                    live music, amazing performances, and incredible
+                    entertainment.
+                </p>
+
+                <div class="event-info-box">
+                    <div>
+                        <h4>Date</h4>
+                        <p>November 15, 2026</p>
+                    </div>
+
+                    <div>
+                        <h4>Location</h4>
+                        <p>Chennai, Tamil Nadu</p>
+                    </div>
+
+                    <div>
+                        <h4>Time</h4>
+                        <p>6:00 PM - 10:00 PM</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="ticket-selection">
+
+                <h2>Select Tickets</h2>
+
+                <div class="ticket-option">
+
+                    <div>
+                        <h3>VIP Ticket</h3>
+                        <p>Premium seating and exclusive access</p>
+                        <strong>₹1,499</strong>
+                    </div>
+
+                    <div class="quantity-control">
+                        <button onclick="changeQuantity('vip', -1)">−</button>
+
+                        <span id="vipQuantity">0</span>
+
+                        <button onclick="changeQuantity('vip', 1)">+</button>
+                    </div>
+
+                </div>
+
+                <div class="ticket-option">
+
+                    <div>
+                        <h3>General Admission</h3>
+                        <p>Standard event entry</p>
+                        <strong>₹499</strong>
+                    </div>
+
+                    <div class="quantity-control">
+                        <button onclick="changeQuantity('general', -1)">−</button>
+
+                        <span id="generalQuantity">0</span>
+
+                        <button onclick="changeQuantity('general', 1)">+</button>
+                    </div>
+
+                </div>
+
+                <div class="booking-summary">
+
+                    <div>
+                        <span>Total Tickets</span>
+                        <strong id="totalTickets">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Total Amount</span>
+                        <strong id="totalAmount">₹0</strong>
+                    </div>
+
+                </div>
+
+                <button class="checkout-btn" onclick="proceedToCheckout()">
+                    Proceed to Checkout
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 TicketZone. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

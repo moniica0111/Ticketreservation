@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Organizer Dashboard | TicketZone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">TICKET<span>ZONE</span></div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#events">Events</a>
+            <a href="organizer-dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <section class="organizer-dashboard">
+
+        <div class="dashboard-heading">
+            <div>
+                <p class="tagline">ORGANIZER PANEL</p>
+                <h1>Dashboard Overview</h1>
+                <p>Manage your events and track ticket sales.</p>
+            </div>
+
+            <button
+                class="create-event-btn"
+                onclick="openEventForm()">
+
+                + Create Event
+
+            </button>
+        </div>
+
+        <!-- Statistics -->
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <p>Total Events</p>
+                <h2 id="totalEvents">0</h2>
+                <span>Events created</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Tickets Sold</p>
+                <h2 id="totalTicketsSold">0</h2>
+                <span>Confirmed bookings</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Total Revenue</p>
+                <h2 id="totalRevenue">₹0</h2>
+                <span>Successful payments</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Conversion Rate</p>
+                <h2 id="conversionRate">0%</h2>
+                <span>Booking conversion</span>
+            </div>
+
+        </div>
+
+        <!-- Analytics -->
+
+        <div class="analytics-container">
+
+            <div class="analytics-card">
+
+                <h2>Revenue Overview</h2>
+
+                <canvas id="revenueChart"></canvas>
+
+            </div>
+
+            <div class="analytics-card">
+
+                <h2>Ticket Sales</h2>
+
+                <canvas id="ticketChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- Event Creation Form -->
+
+        <div class="event-form-container" id="eventFormContainer">
+
+            <h2>Create New Event</h2>
+
+            <form id="eventForm">
+
+                <div class="form-group">
+                    <label for="eventName">Event Name</label>
+
+                    <input
+                        type="text"
+                        id="eventName"
+                        placeholder="Enter event name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventLocation">Location</label>
+
+                    <input
+                        type="text"
+                        id="eventLocation"
+                        placeholder="Enter event location"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventDate">Event Date</label>
+
+                    <input
+                        type="date"
+                        id="eventDate"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="salesCutoff">Sales Cutoff Date</label>
+
+                    <input
+                        type="datetime-local"
+                        id="salesCutoff"
+                        required>
+                </div>
+
+                <h3>VIP Ticket</h3>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="vipPrice">Price (₹)</label>
+
+                        <input
+                            type="number"
+                            id="vipPrice"
+                            min="0"
+                            value="1499"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vipQuantity">Quantity</label>
+
+                        <input
+                            type="number"
+                            id="vipQuantity"
+                            min="0"
+                            value="50"
+                            required>
+                    </div>
+
+                </div>
+
+                <h3>General Admission</h3>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="generalPrice">Price (₹)</label>
+
+                        <input
+                            type="number"
+                            id="generalPrice"
+                            min="0"
+                            value="499"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="generalQuantity">Quantity</label>
+
+                        <input
+                            type="number"
+                            id="generalQuantity"
+                            min="0"
+                            value="200"
+                            required>
+                    </div>
+
+                </div>
+
+                <div class="form-buttons">
+
+                    <button type="submit" class="create-event-btn">
+                        Create Event
+                    </button>
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        onclick="closeEventForm()">
+
+                        Cancel
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- Event Table -->
+
+        <div class="events-management">
+
+            <div class="management-heading">
+                <h2>Manage Events</h2>
+
+                <span id="eventCountLabel">
+                    0 events
+                </span>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Tickets</th>
+                            <th>Revenue</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="eventsTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 TicketZone. All rights reserved.</p>
+    </footer>
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>
