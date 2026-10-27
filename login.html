@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | TicketZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">TICKET<span>ZONE</span></a>
+        <nav><a href="index.html">Home</a><a href="signup.html">Sign Up</a></nav>
+    </header>
+
+    <main class="auth-container">
+        <h1>Login</h1>
+        <p>Sign in to reserve your tickets.</p>
+
+        <form id="loginForm">
+            <label for="email">Email</label>
+            <input id="email" type="email" autocomplete="email" required>
+
+            <label for="password">Password</label>
+            <input id="password" type="password"
+                   autocomplete="current-password" required>
+
+            <button type="submit" class="btn">Login</button>
+            <p id="loginMessage" role="status"></p>
+        </form>
+
+        <p>New here? <a href="signup.html">Create an account</a></p>
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+</html>
