@@ -4,6 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import pool from "./db.js";
 import eventsRouter from "./events.js";
+import authRouter from "./auth.js";
 
 dotenv.config();
 
@@ -31,6 +32,8 @@ app.get("/api/test-db", async (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.use("/api/events", eventsRouter);
+
+app.use("/api/auth", authRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
