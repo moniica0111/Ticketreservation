@@ -963,3 +963,92 @@ footer {
         padding: 20px;
     }
 }
+
+/* Authentication pages */
+.logo {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.nav-signup {
+    color: #7160f0;
+    font-weight: 700;
+}
+
+.auth-container {
+    width: calc(100% - 40px);
+    max-width: 440px;
+    margin: 50px auto;
+    padding: 32px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.auth-container h1 {
+    color: #1b1b35;
+    margin-bottom: 10px;
+}
+
+.auth-container > p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.auth-container label {
+    font-weight: 600;
+    color: #25253b;
+    margin-top: 6px;
+}
+
+.auth-container input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #d5d5df;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.auth-container input:focus {
+    outline: 2px solid #7160f0;
+    border-color: transparent;
+}
+
+.auth-container button {
+    width: 100%;
+    margin-top: 14px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #7160f0;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background: #5c4bdb;
+}
+
+.auth-container a {
+    color: #6655e8;
+}
+
+.auth-footer {
+    margin-top: 20px;
+}
+
+#signupMessage {
+    overflow-wrap: anywhere;
+}
